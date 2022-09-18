@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "316929333517",
+    "firebase_url": "https://teste-capacitacao-58b5a-default-rtdb.firebaseio.com",
+    "project_id": "teste-capacitacao-58b5a",
+    "storage_bucket": "teste-capacitacao-58b5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316929333517:android:06a92ee92f2740d754b844",
+        "android_client_info": {
+          "package_name": "meu.primeiro.devprototipo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316929333517-g0g3d3dm0r5bn6ivsp24ijqs57n9hu8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "meu.primeiro.devprototipo",
+            "certificate_hash": "ca8ba5a23ce5b839e819f3855749f08cb36517a9"
+          }
+        },
+        {
+          "client_id": "316929333517-u3t9jj7kaqom9oc8pit8im6k24rr1lrh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBph4oOyPjlXuNeLVqYU2y2wkaYqMDbU0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316929333517-u3t9jj7kaqom9oc8pit8im6k24rr1lrh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

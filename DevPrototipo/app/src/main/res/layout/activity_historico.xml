@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_screem"
+        tools:context=".Historico">
+
+        <View
+            android:id="@+id/view"
+            android:visibility="invisible"
+            android:layout_width="380dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/retangulo_view"
+            app:layout_constraintBottom_toTopOf="@+id/rodape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonMap"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="170dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/container2"
+            android:text="Visão Mapa"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLocations"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/container2"
+            android:text="Visão Tabela"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@+id/buttonMap"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <View
+            android:id="@+id/rodape"
+            android:layout_width="420dp"
+            android:layout_height="100dp"
+            android:background="@drawable/rodape_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSalvar"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="@+id/rodape"
+            app:layout_constraintEnd_toEndOf="@+id/rodape"
+            app:layout_constraintStart_toStartOf="@+id/rodape" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:background="@drawable/container2"
+            android:layout_marginBottom="30dp"
+            android:text="Limpar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGNSS"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="90dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/icon_satelliteblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/rodape"
+            app:layout_constraintStart_toEndOf="@+id/btnSalvar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfig"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/icon_confblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSalvar"
+            app:layout_constraintStart_toStartOf="@+id/rodape" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnInfo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/icon_infoblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnConfig"
+            app:layout_constraintStart_toStartOf="@+id/rodape" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHistorico"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/icon_historywhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/rodape"
+            app:layout_constraintStart_toEndOf="@+id/btnGNSS" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

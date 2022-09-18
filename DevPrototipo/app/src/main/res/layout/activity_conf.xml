@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_screem"
+        tools:context=".Conf">
+
+        <View
+            android:id="@+id/boxView"
+            android:layout_width="365dp"
+            android:layout_height="685dp"
+            android:layout_marginTop="15dp"
+            android:padding="20dp"
+            android:background="@drawable/retangulo_view"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/rodape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/coordenada"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="620dp"
+            android:background="@drawable/retangulo2"
+            android:padding="5dp"
+            android:text="COORNDENADAS GEOGRÁFICAS"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@id/boxView"
+            app:layout_constraintEnd_toEndOf="@id/boxView"
+            app:layout_constraintStart_toStartOf="@id/boxView"
+            app:layout_constraintTop_toTopOf="@+id/boxView" />
+
+        <RadioGroup
+            android:id="@+id/GroupCO"
+            android:layout_width="320dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coordenada">
+
+            <RadioButton
+                android:id="@+id/RadioDC"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:text="Grau Decimal"
+                android:textColorLink="@color/white"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/RadioMN"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:text="Grau-Minuto Decimal"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/RadioSG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grau-Minuto-Segundo Decimal"
+                android:textSize="18dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/unidade"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/retangulo2"
+            android:padding="5dp"
+            android:text="UNIDADE DE VELOCIDADE"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GroupCO" />
+
+        <RadioGroup
+            android:id="@+id/GroupUV"
+            android:layout_width="320dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unidade">
+
+            <RadioButton
+                android:id="@+id/RadioKM"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Km/h (Quilometro por hora)"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/RadioMPH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mph (Milhas por hora)"
+                android:textSize="18dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/orientacao"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/retangulo2"
+            android:padding="5dp"
+            android:text="ORIENTAÇÃO DO MAPA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GroupUV" />
+
+        <RadioGroup
+            android:id="@+id/GroupOM"
+            android:layout_width="320dp"
+            android:layout_height="98dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orientacao">
+
+            <RadioButton
+                android:id="@+id/RadioNH"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:text="Nenhuma"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/RadioNP"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:text="Sempre ao Norte"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/RadioCP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cursor para Cima"
+                android:textSize="18dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+
+            </ScrollView>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/TextTypeMap"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/container"
+            android:padding="5dp"
+            android:text="TIPO DO MAPA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GroupOM" />
+
+        <RadioGroup
+            android:id="@+id/GroupMP"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/boxView"
+            app:layout_constraintStart_toStartOf="@id/boxView"
+            app:layout_constraintTop_toBottomOf="@+id/TextTypeMap">
+
+            <RadioButton
+                android:id="@+id/RadioVT"
+                android:layout_width="125dp"
+                android:layout_height="85dp"
+                android:background="@drawable/vetorial_img"
+                android:text="Vetorial"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/RadioIS"
+                android:layout_width="125dp"
+                android:layout_height="85dp"
+                android:background="@drawable/satelite_img"
+                android:text="Satélite"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/TextInfo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/retangulo2"
+            android:padding="5dp"
+            android:text="INFORMAÇÕES"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GroupMP" />
+
+        <View
+            android:id="@+id/containerInfo"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/container_switch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextInfo" />
+
+        <TextView
+            android:id="@+id/textOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/containerInfo"
+            app:layout_constraintEnd_toEndOf="@+id/containerInfo"
+            app:layout_constraintStart_toStartOf="@+id/containerInfo"
+            app:layout_constraintTop_toTopOf="@+id/containerInfo" />
+
+        <Switch
+            android:id="@+id/btnSW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="233dp"
+            android:layout_marginEnd="132dp"
+            android:textColorLink="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/containerInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textOff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/containerInfo" />
+
+        <TextView
+            android:id="@+id/textOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/containerInfo"
+            app:layout_constraintEnd_toEndOf="@+id/containerInfo"
+            app:layout_constraintStart_toEndOf="@+id/btnSW"
+            app:layout_constraintTop_toTopOf="@+id/containerInfo" />
+
+        <View
+            android:id="@+id/rodape"
+            android:layout_width="420dp"
+            android:layout_height="97dp"
+            android:background="@drawable/rodape_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/logo"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/rodape"
+            app:layout_constraintStart_toStartOf="@+id/rodape" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGNSS"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="90dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/icon_satelliteblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/rodape"
+            app:layout_constraintStart_toEndOf="@+id/logo" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfig"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/icon_confwhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logo"
+            app:layout_constraintStart_toStartOf="@+id/rodape" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnInfo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/icon_infoblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnConfig"
+            app:layout_constraintStart_toStartOf="@+id/rodape" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHistorico"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/icon_historyblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/rodape"
+            app:layout_constraintStart_toEndOf="@+id/btnGNSS" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSalvar"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="@+id/rodape"
+            app:layout_constraintEnd_toEndOf="@+id/rodape"
+            app:layout_constraintStart_toStartOf="@+id/rodape" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
